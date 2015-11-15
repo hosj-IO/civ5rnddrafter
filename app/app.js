@@ -114,6 +114,17 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
             if ($scope.formData.playerCount > 0 && $scope.formData.countCiv > 0) {
                 var selectedCivs = [];
                 $scope.formData.result = [];
+                $scope.civsWithoutBans = $scope.civs.civilizations;
+
+                for (var i = 0; i < $scope.BannedCivs.length; i++) {
+                    for (var j = 0; j < $scope.civsWithoutBans.length; j++) {
+                        if($scope.BannedCivs[i] === $scope.civsWithoutBans[j].nationName){
+                            $scope.civsWithoutBans.splice(j,1);
+                        }
+                    }
+                }
+
+
                 for (var i = 0; i < $scope.formData.playerCount; i++) {
                     var playerObject = {};
                     playerObject.Name = "Player " + (i + 1);
@@ -121,8 +132,8 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
                     for (var j = 0; j < $scope.formData.countCiv; j++) {
                         var existsInArray = true;
                         do {
-                            var randomNumber = Math.floor((Math.random() * $scope.civs.civilizations.length))
-                            var selectedCiv = $scope.civs.civilizations[randomNumber];
+                            var randomNumber = Math.floor((Math.random() * $scope.civsWithoutBans.length))
+                            var selectedCiv = $scope.civsWithoutBans[randomNumber];
                             for (var k = 0; k < selectedCivs.length; k++) {
                                 if (selectedCiv === selectedCivs[k]) {
                                     existsInArray = true;
