@@ -1,0 +1,19 @@
+<form name="expansionForm">
+    <div ng-form='expansionForm'>
+    <span ng-repeat="expansion in expansions.expansion">
+      <label class="checkbox" for="{{expansion}}">
+          <input type="checkbox" value="{{expansion}}" ng-model="formData.selectedExpansions" name="group"
+                 id="{{expansion}}"/>
+          {{expansion}}
+      </label>
+    </span>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <a ui-sref="form.ban" class="btn btn-block btn-info" ng-disabled="!expansionForm.$valid">
+                    Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</form>

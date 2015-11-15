@@ -1,0 +1,30 @@
+<!-- form.html -->
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <div id="form-container">
+
+            <div class="page-header text-center">
+                <h2>Civilization 5 Random Civilization Drafter</h2>
+
+                <div id="status-buttons" class="text-center">
+                    <a ui-sref-active="active" ui-sref=".playerCount"><span>1</span> Player Count</a>
+                    <a ui-sref-active="active" ui-sref=".expansions"><span>2</span> Expansions</a>
+                    <a ui-sref-active="active" ui-sref=".ban"><span>3</span> Ban</a>
+                    <a ui-sref-active="active" ui-sref=".result"><span>4</span> Results</a>
+                </div>
+            </div>
+
+            <form id="signup-form" ng-submit="processForm()">
+
+                <div id="form-views" ui-view></div>
+            </form>
+
+        </div>
+
+        <footer>
+            Civilization 5 Random Civilization Drafter made by <a href="https://github.com/hosj-IO/civ5rnddrafter">
+            Sjoerd Houben</a> - 2015
+        </footer>
+    </div>
+</div>
