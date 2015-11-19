@@ -150,7 +150,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
 
         $scope.ExpansionLogic = function () {
             var expansionsSelected = [];
-            expansionsSelected.push("Vanilla");
+
             for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
                 if ($scope.formData.selectedExpansions[i] == true) {
                     expansionsSelected.push($scope.expansions.expansion[i]);
