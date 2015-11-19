@@ -175,11 +175,20 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
 
 
         $scope.SelectOrUnselectExpansions = function (isSelect) {
-            if($scope.formData.selectedExpansions.length == 0){
+            if ($scope.formData.selectedExpansions.length == 0) {
                 $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
             }
             for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
                 $scope.formData.selectedExpansions[i] = isSelect;
+            }
+        }
+
+        $scope.PlayerCountLogic = function () {
+            if ($scope.formData.selectedExpansions.length == 0) {
+                $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
+            }
+            for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
+                $scope.formData.selectedExpansions[i] = true;
             }
         }
     });
