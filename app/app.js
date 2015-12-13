@@ -49,7 +49,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
         };
     })
 // =============================================================================
-    .controller('formController', function ($scope, $http) {
+    .controller('formController', function ($scope, $http, $location) {
 
         $scope.started = true;
         $scope.Banned = [];
@@ -136,7 +136,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
                                 if (selectedCiv.nationName === selectedCivs[k].nationName) {
                                     existsInArray = true;
                                     break;
-                                }else{
+                                } else {
                                     existsInArray = false;
                                 }
                             }
@@ -192,5 +192,15 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
             for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
                 $scope.formData.selectedExpansions[i] = true;
             }
+        }
+
+        $scope.Reset = function () {
+            $scope.formData = {};
+            $scope.BannedCivs = [];
+            $scope.Banned = [];
+            $scope.formData.selectedExpansions = [];
+
+            $location.path('/playerCount');
+            $window.location.reload(false);
         }
     });
