@@ -128,17 +128,19 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
                     playerObject.Name = "Player " + (i + 1);
                     playerObject.civs = [];
                     for (var j = 0; j < $scope.formData.countCiv; j++) {
-                        var existsInArray = true;
+                        var existsInArray = false;
                         do {
                             var randomNumber = Math.floor((Math.random() * $scope.civsWithoutBans.length))
                             var selectedCiv = $scope.civsWithoutBans[randomNumber];
                             for (var k = 0; k < selectedCivs.length; k++) {
-                                if (selectedCiv === selectedCivs[k]) {
+                                if (selectedCiv.nationName === selectedCivs[k].nationName) {
                                     existsInArray = true;
                                     break;
+                                }else{
+                                    existsInArray = false;
                                 }
                             }
-                            existsInArray = false;
+
                         } while (existsInArray)
                         playerObject.civs[j] = selectedCiv;
                         selectedCivs.push(selectedCiv);
