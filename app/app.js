@@ -49,7 +49,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
         };
     })
 // =============================================================================
-    .controller('formController', function ($scope, $http) {
+    .controller('formController', function ($scope, $http, $location) {
 
         $scope.started = true;
         $scope.Banned = [];
@@ -63,9 +63,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
 
         $scope.BannedCivs = [];
 
-        $scope.processForm = function () {
-            alert('awesome!');
-        };
+        $scope.formData.selectedExpansions = [];
 
         $http.get('expansions.json')
             .then(function (res) {
@@ -75,7 +73,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
         $http.get('civs.json')
             .then(function (res) {
                 $scope.civs = res.data;
-                $scope.processedCivs = processCivs($scope.civs.civilizations, 5);
+                $scope.preprocessedCivs = $scope.civs.civilizations;
             });
 
 
@@ -114,22 +112,35 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
             if ($scope.formData.playerCount > 0 && $scope.formData.countCiv > 0) {
                 var selectedCivs = [];
                 $scope.formData.result = [];
+                $scope.civsWithoutBans = $scope.preprocessedCivs;
+
+                for (var i = 0; i < $scope.BannedCivs.length; i++) {
+                    for (var j = 0; j < $scope.civsWithoutBans.length; j++) {
+                        if ($scope.BannedCivs[i] === $scope.civsWithoutBans[j].nationName) {
+                            $scope.civsWithoutBans.splice(j, 1);
+                        }
+                    }
+                }
+
+
                 for (var i = 0; i < $scope.formData.playerCount; i++) {
                     var playerObject = {};
                     playerObject.Name = "Player " + (i + 1);
                     playerObject.civs = [];
                     for (var j = 0; j < $scope.formData.countCiv; j++) {
-                        var existsInArray = true;
+                        var existsInArray = false;
                         do {
-                            var randomNumber = Math.floor((Math.random() * $scope.civs.civilizations.length))
-                            var selectedCiv = $scope.civs.civilizations[randomNumber];
+                            var randomNumber = Math.floor((Math.random() * $scope.civsWithoutBans.length))
+                            var selectedCiv = $scope.civsWithoutBans[randomNumber];
                             for (var k = 0; k < selectedCivs.length; k++) {
-                                if (selectedCiv === selectedCivs[k]) {
+                                if (selectedCiv.nationName === selectedCivs[k].nationName) {
                                     existsInArray = true;
                                     break;
+                                } else {
+                                    existsInArray = false;
                                 }
                             }
-                            existsInArray = false;
+
                         } while (existsInArray)
                         playerObject.civs[j] = selectedCiv;
                         selectedCivs.push(selectedCiv);
@@ -139,4 +150,57 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
             }
         }
 
+        $scope.ExpansionLogic = function () {
+            var expansionsSelected = [];
+
+            for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
+                if ($scope.formData.selectedExpansions[i] == true) {
+                    expansionsSelected.push($scope.expansions.expansion[i]);
+                }
+            }
+            for (var i = 0; i < $scope.preprocessedCivs.length; i++) {
+                var count = 0;
+                for (var j = 0; j < expansionsSelected.length; j++) {
+                    if ($scope.preprocessedCivs[i].expansion != expansionsSelected[j]) {
+                        if (count == expansionsSelected.length - 1) {
+                            $scope.preprocessedCivs.splice(i, 1);
+                        }
+                        count++;
+                    } else {
+                        break;
+                    }
+
+                }
+            }
+            $scope.processedCivs = processCivs($scope.preprocessedCivs, 5);
+        }
+
+
+        $scope.SelectOrUnselectExpansions = function (isSelect) {
+            if ($scope.formData.selectedExpansions.length == 0) {
+                $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
+            }
+            for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
+                $scope.formData.selectedExpansions[i] = isSelect;
+            }
+        }
+
+        $scope.PlayerCountLogic = function () {
+            if ($scope.formData.selectedExpansions.length == 0) {
+                $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
+            }
+            for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
+                $scope.formData.selectedExpansions[i] = true;
+            }
+        }
+
+        $scope.Reset = function () {
+            $scope.formData = {};
+            $scope.BannedCivs = [];
+            $scope.Banned = [];
+            $scope.formData.selectedExpansions = [];
+
+            $location.path('/playerCount');
+            $window.location.reload(false);
+        }
     });
