@@ -1,3 +1,6 @@
+<p>Minimum Civs: {{MinimumCivs}}</p>
+<p>Selectable Civs: {{SelectableCivs}}</p>
+<p>Selected Civs: {{SelectedCivsCount}}</p>
 <form name="expansionForm">
     <div ng-form='expansionForm'>
         <div style="margin-bottom: 10px; text-align: center;">
@@ -8,7 +11,7 @@
         </div>
     <span ng-repeat="expansion in expansions.expansion">
       <label class="checkbox" for="{{expansion}}">
-          <input type="checkbox" value="{{expansion}}" ng-model="formData.selectedExpansions[$index]" name="{{expansion}}"
+          <input type="checkbox" value="{{expansion}}" ng-model="formData.selectedExpansions[$index]" ng-click="UpdateCount(expansion,$index); $event.stopPropagation();" name="{{expansion}}"
                  id="{{expansion}}" checked/>
           {{expansion}}
       </label>
