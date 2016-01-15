@@ -11,7 +11,7 @@
         </div>
     <span ng-repeat="expansion in expansions.expansion">
       <label class="checkbox" for="{{expansion}}">
-          <input type="checkbox" value="{{expansion}}" ng-model="formData.selectedExpansions[$index]" ng-click="UpdateCount(expansion,$index); $event.stopPropagation();" name="{{expansion}}"
+          <input type="checkbox" value="{{expansion}}" ng-model="formData.selectedExpansions[$index]" ng-change="UpdateCount(expansion,$index); $event.stopPropagation();" name="{{expansion}}"
                  id="{{expansion}}" checked/>
           {{expansion}}
       </label>

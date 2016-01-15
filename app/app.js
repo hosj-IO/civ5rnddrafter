@@ -226,13 +226,17 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
             $scope.UpdateCount = function (name, index) {
                 var civsInExpansion = GetCivCountFromExpasion(name);
 
-                var expansionState = !$scope.formData.selectedExpansions[index];
+                var expansionState = $scope.formData.selectedExpansions[index];
                 if (expansionState) {
                     $scope.SelectedCivsCount = $scope.SelectedCivsCount + civsInExpansion;
                 } else {
-                    $scope.SelectedCivsCount = $scope.SelectedCivsCount - civsInExpansion;
-                    if ($scope.SelectableCivs - $scope.MinimumCivs <= 0) {
+
+                    var difference = $scope.SelectedCivsCount - $scope.MinimumCivs;
+                    if (difference <= 0) {
                         //Not enough civs. Cancel checkbox action
+                        $scope.formData.selectedExpansions[index] = !expansionState;
+                    }else{
+                        $scope.SelectedCivsCount = $scope.SelectedCivsCount - civsInExpansion;
                     }
                 }
             }
