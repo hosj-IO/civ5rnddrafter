@@ -105,6 +105,8 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
                     $scope.BannedCivs.push(civName);
                     $scope.Banned[index] = true;
                 }
+
+                //TODO Added ban restriction logic
             };
 
             $scope.ResetBanned = function () {
@@ -231,10 +233,10 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
                     $scope.SelectedCivsCount = $scope.SelectedCivsCount + civsInExpansion;
                 } else {
 
-                    var difference = $scope.SelectedCivsCount - $scope.MinimumCivs;
-                    if (difference <= 0) {
-                        //Not enough civs. Cancel checkbox action
+                    var difference = $scope.SelectedCivsCount - civsInExpansion;
+                    if (difference < $scope.MinimumCivs) {
                         $scope.formData.selectedExpansions[index] = !expansionState;
+                        //TODO: Add popup message
                     }else{
                         $scope.SelectedCivsCount = $scope.SelectedCivsCount - civsInExpansion;
                     }
