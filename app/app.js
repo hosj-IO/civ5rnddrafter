@@ -92,21 +92,35 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
 
             $scope.AddOrRemoveFromBanArray = function (civName, index) {
                 if ($scope.BannedCivs.length === 0) {
-                    $scope.BannedCivs.push(civName);
-                    $scope.Banned[index] = true;
+                    var newCount = $scope.SelectedCivsCount - 1;
+                    if (newCount >= $scope.MinimumCivs) {
+                        $scope.BannedCivs.push(civName);
+                        $scope.Banned[index] = true;
+                        $scope.SelectedCivsCount = newCount;
+                    } else {
+                        //TODO: Add popup
+                    }
                 } else {
+
                     for (var i = 0; i < $scope.BannedCivs.length; i++) {
                         if ($scope.BannedCivs[i] === civName) {
                             $scope.BannedCivs.splice(i, 1);
                             $scope.Banned[index] = false;
+                            $scope.SelectedCivsCount = $scope.SelectedCivsCount + 1;
                             return;
                         }
                     }
-                    $scope.BannedCivs.push(civName);
-                    $scope.Banned[index] = true;
-                }
+                    var newCount = $scope.SelectedCivsCount - 1;
+                    if (newCount >= $scope.MinimumCivs) {
+                        $scope.BannedCivs.push(civName);
+                        $scope.Banned[index] = true;
+                        $scope.SelectedCivsCount = newCount;
+                    } else {
+                        //TODO: Add popup
+                    }
 
-                //TODO Added ban restriction logic
+
+                }
             };
 
             $scope.ResetBanned = function () {
@@ -237,7 +251,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
                     if (difference < $scope.MinimumCivs) {
                         $scope.formData.selectedExpansions[index] = !expansionState;
                         //TODO: Add popup message
-                    }else{
+                    } else {
                         $scope.SelectedCivsCount = $scope.SelectedCivsCount - civsInExpansion;
                     }
                 }
