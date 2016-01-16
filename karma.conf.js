@@ -27,10 +27,5 @@ module.exports = function (config) {
             'karma-junit-reporter'
         ],
 
-        junitReporter: {
-            outputFile: 'test_out/unit.xml',
-            suite: 'unit'
-        }
-
     });
 };
