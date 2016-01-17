@@ -52,6 +52,8 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router'])
     .controller('formController', function ($scope, $http, $location) {
 
             $scope.started = true;
+            $scope.isDisabled = true;
+
             $scope.Banned = [];
             $scope.ColLimit = 5;
 

@@ -6,13 +6,7 @@
 
             <div class="page-header text-center">
                 <h2>Civilization 5 Random Civilization Drafter</h2>
-
-                <div id="status-buttons" class="text-center">
-                    <a ui-sref-active="active" ui-sref=".playerCount"><span>1</span> Player Count</a>
-                    <a ui-sref-active="active" ui-sref=".expansions"><span>2</span> Expansions</a>
-                    <a ui-sref-active="active" ui-sref=".ban"><span>3</span> Ban</a>
-                    <a ui-sref-active="active" ui-sref=".result"><span>4</span> Results</a>
-                </div>
+                <div class="col-sm-4"><uib-progressbar class="progress-striped active" max="200" value="166" type="danger"><i>166 / 200</i></uib-progressbar></div>
             </div>
 
             <form id="signup-form" ng-submit="processForm()">
