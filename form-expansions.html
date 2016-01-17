@@ -1,17 +1,16 @@
-<p>Minimum Civs: {{MinimumCivs}}</p>
-<p>Selectable Civs: {{SelectableCivs}}</p>
-<p>Selected Civs: {{SelectedCivsCount}}</p>
+<p>Banned Civilizations: </p>
+<uib-progressbar style="height: 25px;" class="progress-striped active" max="MaxBannable" value="CurrentlyBanned" type="{{BannedType}}">
+    <span style="line-height: 20px;font-size: 20px;">{{CurrentlyBanned}}</span>
+</uib-progressbar>
 <form name="expansionForm">
     <div ng-form='expansionForm'>
-        <div style="margin-bottom: 10px; text-align: center;">
-            <a class="btn btn-danger" ng-click="SelectOrUnselectExpansions(false)">Select none</a>
-        </div>
         <div style="margin-bottom: 10px; text-align: center;">
             <a class="btn btn-info" ng-click="SelectOrUnselectExpansions(true)">Select all</a>
         </div>
     <span ng-repeat="expansion in expansions.expansion">
       <label class="checkbox" for="{{expansion}}">
-          <input type="checkbox" value="{{expansion}}" ng-model="formData.selectedExpansions[$index]" ng-change="UpdateCount(expansion,$index); $event.stopPropagation();" name="{{expansion}}"
+          <input type="checkbox" value="{{expansion}}" ng-model="formData.selectedExpansions[$index]"
+                 ng-change="UpdateCount(expansion,$index); $event.stopPropagation();" name="{{expansion}}"
                  id="{{expansion}}" checked/>
           {{expansion}}
       </label>
@@ -19,7 +18,8 @@
 
         <div class="form-group row">
             <div class="col-xs-6 col-xs-offset-3">
-                <a ui-sref="form.ban" class="btn btn-block btn-info" ng-click="ExpansionLogic()" ng-disabled="!expansionForm.$valid">
+                <a ui-sref="form.ban" class="btn btn-block btn-info" ng-click="ExpansionLogic()"
+                   ng-disabled="!expansionForm.$valid">
                     Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
                 </a>
             </div>
