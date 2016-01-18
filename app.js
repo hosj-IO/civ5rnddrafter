@@ -103,9 +103,9 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                         $scope.Banned[index] = true;
                         $scope.SelectedCivsCount = newCount;
                         $scope.CurrentlyBanned = $scope.CurrentlyBanned + 1;
-                        if($scope.CurrentlyBanned == $scope.MaxBannable){
+                        if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                             $scope.BannedType = "warning";
-                        }else{
+                        } else {
                             $scope.BannedType = "info"
                         }
                     } else {
@@ -119,9 +119,9 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                             $scope.Banned[index] = false;
                             $scope.SelectedCivsCount = $scope.SelectedCivsCount + 1;
                             $scope.CurrentlyBanned = $scope.CurrentlyBanned - 1;
-                            if($scope.CurrentlyBanned == $scope.MaxBannable){
+                            if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                                 $scope.BannedType = "warning";
-                            }else{
+                            } else {
                                 $scope.BannedType = "info"
                             }
                             return;
@@ -133,9 +133,9 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                         $scope.Banned[index] = true;
                         $scope.SelectedCivsCount = newCount;
                         $scope.CurrentlyBanned = $scope.CurrentlyBanned + 1;
-                        if($scope.CurrentlyBanned == $scope.MaxBannable){
+                        if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                             $scope.BannedType = "warning";
-                        }else{
+                        } else {
                             $scope.BannedType = "info"
                         }
                     } else {
@@ -147,6 +147,13 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
             };
 
             $scope.ResetBanned = function () {
+                var bannedLength = $scope.BannedCivs.length;
+                $scope.CurrentlyBanned = $scope.CurrentlyBanned - bannedLength;
+                if ($scope.CurrentlyBanned == $scope.MaxBannable) {
+                    $scope.BannedType = "warning";
+                } else {
+                    $scope.BannedType = "info"
+                }
                 $scope.BannedCivs = [];
                 $scope.Banned = [];
             }
@@ -238,6 +245,8 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                     //if the state is changed
                     $scope.formData.selectedExpansions[i] = isSelect;
                 }
+                $scope.CurrentlyBanned = 0;
+                $scope.BannedType = "info"
             }
 
             $scope.PlayerCountLogic = function () {
@@ -270,9 +279,9 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                 if (expansionState) {
                     $scope.SelectedCivsCount = $scope.SelectedCivsCount + civsInExpansion;
                     $scope.CurrentlyBanned = $scope.CurrentlyBanned - civsInExpansion;
-                    if($scope.CurrentlyBanned == $scope.MaxBannable){
+                    if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                         $scope.BannedType = "warning";
-                    }else{
+                    } else {
                         $scope.BannedType = "info"
                     }
                 } else {
@@ -284,9 +293,9 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                     } else {
                         $scope.SelectedCivsCount = $scope.SelectedCivsCount - civsInExpansion;
                         $scope.CurrentlyBanned = $scope.CurrentlyBanned + civsInExpansion;
-                        if($scope.CurrentlyBanned == $scope.MaxBannable){
+                        if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                             $scope.BannedType = "warning";
-                        }else{
+                        } else {
                             $scope.BannedType = "info"
                         }
                     }
