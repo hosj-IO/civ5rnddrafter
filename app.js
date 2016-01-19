@@ -209,12 +209,15 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                         expansionsSelected.push($scope.expansions.expansion[i]);
                     }
                 }
-                for (var i = 0; i < $scope.preprocessedCivs.length; i++) {
+
+                var i = $scope.preprocessedCivs.length
+                while (i--) {
                     var count = 0;
                     for (var j = 0; j < expansionsSelected.length; j++) {
                         if ($scope.preprocessedCivs[i].expansion != expansionsSelected[j]) {
                             if (count == expansionsSelected.length - 1) {
                                 $scope.preprocessedCivs.splice(i, 1);
+                                break;
                             }
                             count++;
                         } else {
