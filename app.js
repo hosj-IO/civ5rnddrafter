@@ -49,7 +49,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
         };
     })
     // =============================================================================
-    .controller('formController', function ($scope, $http, $location) {
+    .controller('formController', function ($scope, $http, $location,$window ) {
 
             $scope.started = true;
             $scope.isDisabled = true;
@@ -107,10 +107,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                         $scope.CurrentlyBanned = $scope.CurrentlyBanned + 1;
                         if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                             $scope.BannedType = "warning";
-<<<<<<< HEAD
-=======
                             $scope.showAlert = true;
->>>>>>> 74926a1c40b14d2d274761931314f792a2558210
                         } else {
                             $scope.BannedType = "info"
                             $scope.showAlert = false;
@@ -128,10 +125,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                             $scope.CurrentlyBanned = $scope.CurrentlyBanned - 1;
                             if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                                 $scope.BannedType = "warning";
-<<<<<<< HEAD
-=======
                                 $scope.showAlert = true;
->>>>>>> 74926a1c40b14d2d274761931314f792a2558210
                             } else {
                                 $scope.BannedType = "info"
                                 $scope.showAlert = false;
@@ -147,10 +141,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                         $scope.CurrentlyBanned = $scope.CurrentlyBanned + 1;
                         if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                             $scope.BannedType = "warning";
-<<<<<<< HEAD
-=======
                             $scope.showAlert = true;
->>>>>>> 74926a1c40b14d2d274761931314f792a2558210
                         } else {
                             $scope.BannedType = "info"
                             $scope.showAlert = false;
@@ -297,10 +288,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                     $scope.CurrentlyBanned = $scope.CurrentlyBanned - civsInExpansion;
                     if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                         $scope.BannedType = "warning";
-<<<<<<< HEAD
-=======
                         $scope.showAlert = true;
->>>>>>> 74926a1c40b14d2d274761931314f792a2558210
                     } else {
                         $scope.BannedType = "info"
                         $scope.showAlert = false;
@@ -316,10 +304,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                         $scope.CurrentlyBanned = $scope.CurrentlyBanned + civsInExpansion;
                         if ($scope.CurrentlyBanned == $scope.MaxBannable) {
                             $scope.BannedType = "warning";
-<<<<<<< HEAD
-=======
                             $scope.showAlert = true;
->>>>>>> 74926a1c40b14d2d274761931314f792a2558210
                         } else {
                             $scope.BannedType = "info"
                             $scope.showAlert = false;
