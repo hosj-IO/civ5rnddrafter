@@ -2,6 +2,7 @@
 <uib-progressbar style="height: 25px;" class="progress-striped active" max="MaxBannable" value="CurrentlyBanned" type="{{BannedType}}">
     <span style="line-height: 20px;font-size: 20px;">{{CurrentlyBanned}}</span>
 </uib-progressbar>
+<uib-alert ng-show="showAlert" type="warning" style="text-align: center;">You have banned the maximum amount of civs!</uib-alert>
 <form name='banForm'>
     <div ng-form='banForm'>
         <div class="form-group">
