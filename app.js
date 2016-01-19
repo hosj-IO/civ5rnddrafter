@@ -49,7 +49,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
         };
     })
     // =============================================================================
-    .controller('formController', function ($scope, $http, $location) {
+    .controller('formController', function ($scope, $http, $location, $window) {
 
             $scope.started = true;
             $scope.isDisabled = true;
@@ -265,18 +265,14 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
             }
 
             $scope.Reset = function () {
-                $scope.formData = {};
-                $scope.BannedCivs = [];
-                $scope.Banned = [];
-                $scope.formData.selectedExpansions = [];
-
-                $location.path('/playerCount');
-                $window.location.reload(false);
+                $location.path('index.html');
+                $window.location.reload();
             }
 
             $scope.UpdateCount = function (name, index) {
                 var civsInExpansion = GetCivCountFromExpasion(name);
-
+                if (civsInExpansion == 0)
+                    throw "0 civilization in expansion. This is of course impossible";
                 var expansionState = $scope.formData.selectedExpansions[index];
                 if (expansionState) {
                     $scope.SelectedCivsCount = $scope.SelectedCivsCount + civsInExpansion;
