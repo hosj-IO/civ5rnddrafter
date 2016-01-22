@@ -116,6 +116,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                 if (civsInExpansion == 0)
                     throw "0 civilization in expansion. This is of course impossible";
                 var expansionState = $scope.formData.selectedExpansions[index];
+
                 if (expansionState) {
                     $scope.SelectedCivsCount = $scope.SelectedCivsCount + civsInExpansion;
                     $scope.CurrentlyBanned = $scope.CurrentlyBanned - civsInExpansion;
@@ -160,35 +161,53 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
             }
 
             $scope.ExpansionLogic = function () {
-                var expansionsSelected = [];
-
+                var selectedExpansion = [];
                 for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
                     if ($scope.formData.selectedExpansions[i] == true) {
-                        expansionsSelected.push($scope.expansions.expansion[i]);
+                        selectedExpansion.push($scope.expansions.expansion[i]);
                     }
                 }
 
-                var i = $scope.preprocessedCivs.length
-                while (i--) {
-                    var count = 0;
-                    for (var j = 0; j < expansionsSelected.length; j++) {
-                        if ($scope.preprocessedCivs[i].expansion != expansionsSelected[j]) {
-                            if (count == expansionsSelected.length - 1) {
-                                $scope.preprocessedCivs.splice(i, 1);
-                                break;
+                var civIndex = $scope.preprocessedCivs.length;
+
+                while (civIndex--) {
+                    for (var j = 0; j < selectedExpansion.length; j++) {
+                        var isNotBanned = false;
+                        var expansion = selectedExpansion[j];
+                        if ($scope.preprocessedCivs[civIndex].expansion.length > 1) {
+                            for (var k = 0; k < $scope.preprocessedCivs[civIndex].expansion.length; k++) {
+                                var civExpansion = $scope.preprocessedCivs[civIndex].expansion[k];
+                                if (civExpansion == expansion) {
+                                    isNotBanned = true;
+                                    break;
+                                } else {
+                                    if (j == selectedExpansion.length - 1) {
+                                        $scope.preprocessedCivs.splice(civIndex, 1);
+                                    }
+                                }
                             }
-                            count++;
+
                         } else {
+                            if ($scope.preprocessedCivs[civIndex].expansion[0] == expansion) {
+                                break;
+                            } else {
+                                if (j == selectedExpansion.length - 1) {
+                                    $scope.preprocessedCivs.splice(civIndex, 1);
+                                }
+                            }
+                        }
+                        if (isNotBanned) {
+                            isNotBanned = false;
                             break;
                         }
-
                     }
                 }
                 $scope.processedCivs = processCivs($scope.preprocessedCivs, 5);
             }
+
             //endregion
 
-            //region BanCivLogic
+//region BanCivLogic
             $scope.AddOrRemoveFromBanArray = function (civName, index) {
                 if ($scope.BannedCivs.length === 0) {
                     var newCount = $scope.SelectedCivsCount - 1;
@@ -299,16 +318,16 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                     }
                 }
             }
-            //endregion
+//endregion
 
-            //region Reset
+//region Reset
             $scope.Reset = function () {
                 $location.path('index.html');
                 $window.location.reload();
             }
-            //endregion
+//endregion
 
-            //region Private Functions
+//region Private Functions
             function processCivs(array, size) {
                 var newArray = [];
                 var l = array.length;
@@ -341,14 +360,15 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                     }
 
                 }
-                if(countBannedCounter == civ.expansion - 1 && countBannedCounter == civ.expansion){
+                if (countBannedCounter == civ.expansion - 1 && countBannedCounter == civ.expansion) {
                     return true;
-                }else{
+                } else {
                     return false;
                 }
             }
 
-            //endregion
+//endregion
         }
-        //endregion
-    );
+//endregion
+    )
+    ;
