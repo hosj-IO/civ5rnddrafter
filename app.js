@@ -171,35 +171,24 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                 var civIndex = $scope.preprocessedCivs.length;
 
                 while (civIndex--) {
+                    var isNotBanned = false;
+                    var civ = $scope.preprocessedCivs[civIndex];
                     for (var j = 0; j < selectedExpansion.length; j++) {
-                        var isNotBanned = false;
                         var expansion = selectedExpansion[j];
-                        if ($scope.preprocessedCivs[civIndex].expansion.length > 1) {
-                            for (var k = 0; k < $scope.preprocessedCivs[civIndex].expansion.length; k++) {
-                                var civExpansion = $scope.preprocessedCivs[civIndex].expansion[k];
-                                if (civExpansion == expansion) {
-                                    isNotBanned = true;
-                                    break;
-                                } else {
-                                    if (j == selectedExpansion.length - 1) {
-                                        $scope.preprocessedCivs.splice(civIndex, 1);
-                                    }
-                                }
-                            }
 
-                        } else {
-                            if ($scope.preprocessedCivs[civIndex].expansion[0] == expansion) {
-                                break;
-                            } else {
+                        for (var k = 0; k < civ.expansion.length; k++) {
+                            var civExpansion = civ.expansion[k]
+                            if (civExpansion != expansion) {
                                 if (j == selectedExpansion.length - 1) {
                                     $scope.preprocessedCivs.splice(civIndex, 1);
                                 }
+                            } else {
+                                isNotBanned = true;
+                                break;
                             }
                         }
-                        if (isNotBanned) {
-                            isNotBanned = false;
+                        if (isNotBanned)
                             break;
-                        }
                     }
                 }
                 $scope.processedCivs = processCivs($scope.preprocessedCivs, 5);
