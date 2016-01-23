@@ -6,6 +6,7 @@
 var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
 
     // =============================================================================
+    //region Config
     .config(function ($stateProvider, $urlRouterProvider) {
 
         $stateProvider
@@ -37,6 +38,8 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
 
         $urlRouterProvider.otherwise('/form/playerCount');
     })
+    //endregion
+    //region Filter
     .filter('range', function () {
         return function (input, total) {
             total = parseInt(total);
@@ -48,11 +51,16 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
             return input;
         };
     })
+    //endregion
     // =============================================================================
-    .controller('formController', function ($scope, $http, $location,$window ) {
+    //region Controller
+    .controller('formController', function ($scope, $http, $location, $window) {
 
-            $scope.started = true;
+
+            //region Variables
             $scope.isDisabled = true;
+            $scope.started = true;
+
 
             $scope.Banned = [];
             $scope.ColLimit = 5;
@@ -66,16 +74,15 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
 
             $scope.showAlert = false;
 
-            $scope.Starting = function () {
-                $scope.started = !$scope.started;
-            }
 
             $scope.formData = {};
 
             $scope.BannedCivs = [];
 
             $scope.formData.selectedExpansions = [];
+            //endregion
 
+            //region Getters JSON
             $http.get('expansions.json')
                 .then(function (res) {
                     $scope.expansions = res.data;
@@ -86,17 +93,110 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                     $scope.civs = res.data;
                     $scope.preprocessedCivs = $scope.civs.civilizations;
                 });
+            //endregion
 
-
-            function processCivs(array, size) {
-                var newArray = [];
-                var l = array.length;
-                for (var i = 0; i < array.length; i += size) {
-                    newArray.push(array.slice(i, i + size));
+            //region PlayerCountLogic
+            $scope.PlayerCountLogic = function () {
+                if ($scope.formData.selectedExpansions.length == 0) {
+                    $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
                 }
-                return newArray;
-            };
+                for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
+                    $scope.formData.selectedExpansions[i] = true;
+                }
+                $scope.MinimumCivs = $scope.formData.playerCount * $scope.formData.countCiv;
+                $scope.SelectableCivs = $scope.preprocessedCivs.length;
+                $scope.SelectedCivsCount = $scope.SelectableCivs;
+                $scope.MaxBannable = $scope.SelectableCivs - $scope.MinimumCivs;
+            }
+            //endregion
 
+            //region ExpansionLogic
+            $scope.UpdateCount = function (name, index) {
+                var civsInExpansion = GetCivCountFromExpasion(name);
+                if (civsInExpansion == 0)
+                    throw "0 civilization in expansion. This is of course impossible";
+                var expansionState = $scope.formData.selectedExpansions[index];
+
+                if (expansionState) {
+                    $scope.SelectedCivsCount = $scope.SelectedCivsCount + civsInExpansion;
+                    $scope.CurrentlyBanned = $scope.CurrentlyBanned - civsInExpansion;
+                    if ($scope.CurrentlyBanned == $scope.MaxBannable) {
+                        $scope.BannedType = "warning";
+                        $scope.showAlert = true;
+                    } else {
+                        $scope.BannedType = "info"
+                        $scope.showAlert = false;
+                    }
+                } else {
+
+                    var difference = $scope.SelectedCivsCount - civsInExpansion;
+                    if (difference < $scope.MinimumCivs) {
+                        $scope.formData.selectedExpansions[index] = !expansionState;
+                        //TODO: Add popup message
+                    } else {
+                        $scope.SelectedCivsCount = $scope.SelectedCivsCount - civsInExpansion;
+                        $scope.CurrentlyBanned = $scope.CurrentlyBanned + civsInExpansion;
+                        if ($scope.CurrentlyBanned == $scope.MaxBannable) {
+                            $scope.BannedType = "warning";
+                            $scope.showAlert = true;
+                        } else {
+                            $scope.BannedType = "info"
+                            $scope.showAlert = false;
+                        }
+                    }
+                }
+            }
+
+            $scope.SelectOrUnselectExpansions = function (isSelect) {
+                if ($scope.formData.selectedExpansions.length == 0) {
+                    $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
+                }
+                for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
+                    //if the state is changed
+                    $scope.formData.selectedExpansions[i] = isSelect;
+                }
+                $scope.CurrentlyBanned = 0;
+                $scope.BannedType = "info"
+                var test = 0;
+            }
+
+            $scope.ExpansionLogic = function () {
+                var selectedExpansion = [];
+                for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
+                    if ($scope.formData.selectedExpansions[i] == true) {
+                        selectedExpansion.push($scope.expansions.expansion[i]);
+                    }
+                }
+
+                var civIndex = $scope.preprocessedCivs.length;
+
+                while (civIndex--) {
+                    var isNotBanned = false;
+                    var civ = $scope.preprocessedCivs[civIndex];
+                    for (var j = 0; j < selectedExpansion.length; j++) {
+                        var expansion = selectedExpansion[j];
+
+                        for (var k = 0; k < civ.expansion.length; k++) {
+                            var civExpansion = civ.expansion[k]
+                            if (civExpansion != expansion) {
+                                if (j == selectedExpansion.length - 1) {
+                                    $scope.preprocessedCivs.splice(civIndex, 1);
+                                }
+                            } else {
+                                isNotBanned = true;
+                                break;
+                            }
+                        }
+                        if (isNotBanned)
+                            break;
+                    }
+                }
+                $scope.processedCivs = processCivs($scope.preprocessedCivs, 5);
+            }
+
+            //endregion
+
+//region BanCivLogic
             $scope.AddOrRemoveFromBanArray = function (civName, index) {
                 if ($scope.BannedCivs.length === 0) {
                     var newCount = $scope.SelectedCivsCount - 1;
@@ -207,35 +307,24 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
                     }
                 }
             }
+//endregion
 
-            $scope.ExpansionLogic = function () {
-                var expansionsSelected = [];
-
-                for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
-                    if ($scope.formData.selectedExpansions[i] == true) {
-                        expansionsSelected.push($scope.expansions.expansion[i]);
-                    }
-                }
-
-                var i = $scope.preprocessedCivs.length
-                while (i--) {
-                    var count = 0;
-                    for (var j = 0; j < expansionsSelected.length; j++) {
-                        if ($scope.preprocessedCivs[i].expansion != expansionsSelected[j]) {
-                            if (count == expansionsSelected.length - 1) {
-                                $scope.preprocessedCivs.splice(i, 1);
-                                break;
-                            }
-                            count++;
-                        } else {
-                            break;
-                        }
-
-                    }
-                }
-                $scope.processedCivs = processCivs($scope.preprocessedCivs, 5);
+//region Reset
+            $scope.Reset = function () {
+                $location.path('index.html');
+                $window.location.reload();
             }
+//endregion
 
+//region Private Functions
+            function processCivs(array, size) {
+                var newArray = [];
+                var l = array.length;
+                for (var i = 0; i < array.length; i += size) {
+                    newArray.push(array.slice(i, i + size));
+                }
+                return newArray;
+            };
 
             function GetCivCountFromExpasion(name) {
                 var count = 0;
@@ -248,69 +337,27 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
 
             }
 
-            $scope.SelectOrUnselectExpansions = function (isSelect) {
-                if ($scope.formData.selectedExpansions.length == 0) {
-                    $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
-                }
-                for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
-                    //if the state is changed
-                    $scope.formData.selectedExpansions[i] = isSelect;
-                }
-                $scope.CurrentlyBanned = 0;
-                $scope.BannedType = "info"
-            }
-
-            $scope.PlayerCountLogic = function () {
-                if ($scope.formData.selectedExpansions.length == 0) {
-                    $scope.formData.selectedExpansions = new Array($scope.expansions.expansion.length);
-                }
-                for (var i = 0; i < $scope.formData.selectedExpansions.length; i++) {
-                    $scope.formData.selectedExpansions[i] = true;
-                }
-                $scope.MinimumCivs = $scope.formData.playerCount * $scope.formData.countCiv;
-                $scope.SelectableCivs = $scope.preprocessedCivs.length;
-                $scope.SelectedCivsCount = $scope.SelectableCivs;
-                $scope.MaxBannable = $scope.SelectableCivs - $scope.MinimumCivs;
-            }
-
-            $scope.Reset = function () {
-                $location.path('index.html');
-                $window.location.reload();
-            }
-
-            $scope.UpdateCount = function (name, index) {
-                var civsInExpansion = GetCivCountFromExpasion(name);
-                if (civsInExpansion == 0)
-                    throw "0 civilization in expansion. This is of course impossible";
-                var expansionState = $scope.formData.selectedExpansions[index];
-                if (expansionState) {
-                    $scope.SelectedCivsCount = $scope.SelectedCivsCount + civsInExpansion;
-                    $scope.CurrentlyBanned = $scope.CurrentlyBanned - civsInExpansion;
-                    if ($scope.CurrentlyBanned == $scope.MaxBannable) {
-                        $scope.BannedType = "warning";
-                        $scope.showAlert = true;
-                    } else {
-                        $scope.BannedType = "info"
-                        $scope.showAlert = false;
-                    }
-                } else {
-
-                    var difference = $scope.SelectedCivsCount - civsInExpansion;
-                    if (difference < $scope.MinimumCivs) {
-                        $scope.formData.selectedExpansions[index] = !expansionState;
-                        //TODO: Add popup message
-                    } else {
-                        $scope.SelectedCivsCount = $scope.SelectedCivsCount - civsInExpansion;
-                        $scope.CurrentlyBanned = $scope.CurrentlyBanned + civsInExpansion;
-                        if ($scope.CurrentlyBanned == $scope.MaxBannable) {
-                            $scope.BannedType = "warning";
-                            $scope.showAlert = true;
-                        } else {
-                            $scope.BannedType = "info"
-                            $scope.showAlert = false;
+            function ShouldCivBeBannedWithMultipleDLC(civ, bannedExpansionList) {
+                var countBannedCounter = 0;
+                for (var i = 0; i < civ.expansion.length; i++) {
+                    var expansion = civ.expansion.l[i];
+                    for (var j = 0; j < bannedExpansionList.length; j++) {
+                        var bannedExpansion = bannedExpansionList[j];
+                        if (expansion == bannedExpansion) {
+                            countBannedCounter++;
                         }
                     }
+
+                }
+                if (countBannedCounter == civ.expansion - 1 && countBannedCounter == civ.expansion) {
+                    return true;
+                } else {
+                    return false;
                 }
             }
+
+//endregion
         }
-    );
+//endregion
+    )
+    ;
