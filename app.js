@@ -80,20 +80,32 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
             $scope.BannedCivs = [];
 
             $scope.formData.selectedExpansions = [];
+
+            $scope.game = 6;
             //endregion
 
             //region Getters JSON
-            $http.get('expansions.json')
+            $http.get('expansions.'+ $scope.game +'.json')
                 .then(function (res) {
                     $scope.expansions = res.data;
                 });
 
-            $http.get('civs.json')
+            $http.get('civs.'+ $scope.game +'.json')
                 .then(function (res) {
                     $scope.civs = res.data;
                     $scope.preprocessedCivs = $scope.civs.civilizations;
                 });
             //endregion
+
+            //region Switch civs
+            $scope.Switch = function () {
+                if($scope.game ==6){
+                    $scope.game = 5;
+                }else if ($scope.game == 5){
+                    $scope.game = 6;
+                }
+            }
+
 
             //region PlayerCountLogic
             $scope.PlayerCountLogic = function () {
