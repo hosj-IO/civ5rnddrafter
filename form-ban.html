@@ -13,7 +13,7 @@
                 <tr ng-repeat="rows in processedCivs">
                     <td ng-repeat="civ in rows" ng-click="AddOrRemoveFromBanArray(civ.nationName, $parent.$index * 5 + $index)"
                         ng-class="{'strike': Banned[$parent.$index * 5 + $index ], 'notStrike': !Banned[$parent.$index * 5 + $index]}">
-                        <img src="images/{{civ.nationPicturePath}}" alt="{{civ.nationName}}" width="32"/>
+                        <!--<img src="images/{{civ.nationPicturePath}}" alt="{{civ.nationName}}" width="32"/>-->
                         {{civ.nationName}}
                     </td>
                 </tr>
