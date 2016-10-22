@@ -10,7 +10,6 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
     .config(function ($stateProvider, $urlRouterProvider) {
 
         $stateProvider
-
             .state('form', {
                 url: '/form',
                 templateUrl: 'form.html',
@@ -34,8 +33,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
             .state('form.result', {
                 url: '/result',
                 templateUrl: 'form-result.html'
-            })
-        ;
+            });
 
         $urlRouterProvider.otherwise('/form/playerCount');
     })
@@ -82,7 +80,7 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
 
             $scope.formData.selectedExpansions = [];
 
-            $scope.game = 6;
+            $scope.game = 5;
             //endregion
 
             //region Getters JSON
