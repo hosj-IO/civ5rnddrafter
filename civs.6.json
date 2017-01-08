@@ -100,6 +100,13 @@
       ],
       "nationPicturePath": "Norwegian_(Civ6).png"
     },{
+      "nationName": "Poland",
+      "leaderName": "Jadwiga",
+      "expansion": [
+        "Poland"
+      ],
+      "nationPicturePath": "Poland_(Civ6).png"
+    } ,{
       "nationName": "Roman",
       "leaderName": "Trajan",
       "expansion": [
