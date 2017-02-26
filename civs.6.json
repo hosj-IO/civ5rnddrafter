@@ -15,6 +15,14 @@
         "Vanilla"
       ],
       "nationPicturePath": "Arabian_(Civ6).png"
+    },
+    {
+      "nationName": "Australia",
+      "leaderName": "John Curtin",
+      "expansion": [
+        "Australia"
+      ],
+      "nationPicturePath": "Australia_(Civ6).png"
     },  {
       "nationName": "Aztec",
       "leaderName": "Montezuma",
