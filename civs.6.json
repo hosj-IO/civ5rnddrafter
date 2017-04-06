@@ -101,12 +101,26 @@
       ],
       "nationPicturePath": "Kongolese_(Civ6).png"
     },{
+      "nationName": "Macedonian",
+      "leaderName": "Alexander",
+      "expansion": [
+        "Persia and Macedon"
+      ],
+      "nationPicturePath": "Macedonian_(Civ6).png"
+    },{
       "nationName": "Norwegian",
       "leaderName": "Harald Hardada",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Norwegian_(Civ6).png"
+    },{
+      "nationName": "Persia",
+      "leaderName": "Cyrus",
+      "expansion": [
+        "Persia and Macedon"
+      ],
+      "nationPicturePath": "Persia_(Civ6).png"
     },{
       "nationName": "Poland",
       "leaderName": "Jadwiga",
