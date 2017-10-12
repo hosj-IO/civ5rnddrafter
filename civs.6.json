@@ -1,4 +1,4 @@
-{
+  {
   "civilizations": [
     {
       "nationName": "American",
@@ -114,7 +114,16 @@
         "Vanilla"
       ],
       "nationPicturePath": "Norwegian_(Civ6).png"
-    },{
+    },
+    {
+      "nationName": "Nubia",
+      "leaderName": "Amanitore",
+      "expansion": [
+        "Nubia"
+      ],
+      "nationPicturePath": "Nubia_(Civ6).png"
+    },
+    {
       "nationName": "Persia",
       "leaderName": "Cyrus",
       "expansion": [
