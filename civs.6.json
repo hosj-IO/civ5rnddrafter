@@ -1,4 +1,4 @@
-  {
+{
   "civilizations": [
     {
       "nationName": "American",
@@ -23,91 +23,120 @@
         "Australia"
       ],
       "nationPicturePath": "Australia_(Civ6).png"
-    },  {
+    },
+    {
       "nationName": "Aztec",
       "leaderName": "Montezuma",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Aztec_(Civ6).png"
-    },  {
+    },
+    {
       "nationName": "Brazilian",
       "leaderName": "Pedro II",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Brazilian_(Civ6).png"
-    }, {
+    },
+    {
       "nationName": "Chinese",
       "leaderName": "Qin Shi Huang",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Chinese_(Civ6).png"
-    }, {
+    },
+    {
       "nationName": "Egyptian",
       "leaderName": "Cleopatra",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Egyptian_(Civ6).png"
-    }, {
+    },
+    {
       "nationName": "English",
       "leaderName": "Victoria",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "English_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "French",
       "leaderName": "Catherine de Medici",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "French_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "German",
       "leaderName": "Frederick Barbarossa",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "German_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Greek",
       "leaderName": "Pericles",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Greek_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Indian",
       "leaderName": "Gandhi",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Indian_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Japanese",
       "leaderName": "Hojo Tokimune",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Japanese_(Civ6).png"
-    },{
+    },
+    {
+      "nationName": "Khmer",
+      "leaderName": "Jayavarman VII",
+      "expansion": [
+        "Khmer and Indonesia"
+      ],
+      "nationPicturePath": "Khmer_(Civ6).png"
+    },
+    {
       "nationName": "Kongolese",
       "leaderName": "Mvemba a Nzinga",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Kongolese_(Civ6).png"
-    },{
+    },
+    {
+      "nationName": "Indonesia",
+      "leaderName": "Gitarja",
+      "expansion": [
+        "Khmer and Indonesia"
+      ],
+      "nationPicturePath": "Indonesia_(Civ6).png"
+    },
+    {
       "nationName": "Macedonian",
       "leaderName": "Alexander",
       "expansion": [
         "Persia and Macedon"
       ],
       "nationPicturePath": "Macedonian_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Norwegian",
       "leaderName": "Harald Hardada",
       "expansion": [
@@ -130,35 +159,40 @@
         "Persia and Macedon"
       ],
       "nationPicturePath": "Persia_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Poland",
       "leaderName": "Jadwiga",
       "expansion": [
         "Poland"
       ],
       "nationPicturePath": "Poland_(Civ6).png"
-    } ,{
+    },
+    {
       "nationName": "Roman",
       "leaderName": "Trajan",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Roman_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Russian",
       "leaderName": "Peter",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Russian_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Scythian",
       "leaderName": "Tomyris",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Scythian_(Civ6).png"
-    },{
+    },
+    {
       "nationName": "Spanish",
       "leaderName": "Philip II",
       "expansion": [
