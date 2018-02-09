@@ -49,6 +49,22 @@
       "nationPicturePath": "Chinese_(Civ6).png"
     },
     {
+      "nationName": "Cree",
+      "leaderName": "Poundmaker",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Cree_(Civ6).png"
+    },
+    {
+      "nationName": "Dutch",
+      "leaderName": "Wilhelmina",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Dutch_(Civ6).png"
+    },
+    {
       "nationName": "Egyptian",
       "leaderName": "Cleopatra",
       "expansion": [
@@ -71,6 +87,14 @@
         "Vanilla"
       ],
       "nationPicturePath": "French_(Civ6).png"
+    },
+    {
+      "nationName": "Georgian",
+      "leaderName": "Tamar",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Georgian_(Civ6).png"
     },
     {
       "nationName": "German",
@@ -121,6 +145,14 @@
       "nationPicturePath": "Kongolese_(Civ6).png"
     },
     {
+      "nationName": "Korean",
+      "leaderName": "Seondeok",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Korean_(Civ6).png"
+    },
+    {
       "nationName": "Indonesia",
       "leaderName": "Gitarja",
       "expansion": [
@@ -135,6 +167,22 @@
         "Persia and Macedon"
       ],
       "nationPicturePath": "Macedonian_(Civ6).png"
+    },
+    {
+      "nationName": "Mapuche",
+      "leaderName": "Lautaro",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Mapuche_(Civ6).png"
+    },
+    {
+      "nationName": "Mongolian",
+      "leaderName": "Genghis Khan",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Mongolian_(Civ6).png"
     },
     {
       "nationName": "Norwegian",
@@ -193,6 +241,14 @@
       "nationPicturePath": "Scythian_(Civ6).png"
     },
     {
+      "nationName": "Scottish",
+      "leaderName": "Robert the Bruce",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Scottish_(Civ6).png"
+    },
+    {
       "nationName": "Spanish",
       "leaderName": "Philip II",
       "expansion": [
@@ -207,6 +263,14 @@
         "Vanilla"
       ],
       "nationPicturePath": "Sumerian_(Civ6).png"
+    },
+    {
+      "nationName": "Zulu",
+      "leaderName": "Shaka",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Zulu_(Civ6).png"
     }
   ]
 }
