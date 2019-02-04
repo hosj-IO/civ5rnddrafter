@@ -41,6 +41,14 @@
       "nationPicturePath": "Brazilian_(Civ6).png"
     },
     {
+      "nationName": "Canadian",
+      "leaderName": "Wilfrid Laurier",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Canadian_(Civ6).png"
+    },
+    {
       "nationName": "Chinese",
       "leaderName": "Qin Shi Huang",
       "expansion": [
@@ -113,6 +121,14 @@
       "nationPicturePath": "Greek_(Civ6).png"
     },
     {
+      "nationName": "Hungarian",
+      "leaderName": "Matthias Corvinus",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Hungarian_(Civ6).png"
+    },
+    {
       "nationName": "Indian",
       "leaderName": "Gandhi",
       "expansion": [
@@ -153,6 +169,14 @@
       "nationPicturePath": "Korean_(Civ6).png"
     },
     {
+      "nationName": "Incan",
+      "leaderName": "Pachacuti",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Incan_(Civ6).png"
+    },
+    {
       "nationName": "Indonesia",
       "leaderName": "Gitarja",
       "expansion": [
@@ -167,6 +191,22 @@
         "Persia and Macedon"
       ],
       "nationPicturePath": "Macedonian_(Civ6).png"
+    },
+    {
+      "nationName": "Mali",
+      "leaderName": "Mansa Musa",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Mali_(Civ6).png"
+    },
+    {
+      "nationName": "Māori",
+      "leaderName": "Kupe",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Māori_(Civ6).png"
     },
     {
       "nationName": "Mapuche",
@@ -201,12 +241,28 @@
       "nationPicturePath": "Nubia_(Civ6).png"
     },
     {
+      "nationName": "Ottoman",
+      "leaderName": "Suleiman",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Ottoman_(Civ6).png"
+    },
+    {
       "nationName": "Persia",
       "leaderName": "Cyrus",
       "expansion": [
         "Persia and Macedon"
       ],
       "nationPicturePath": "Persia_(Civ6).png"
+    },
+    {
+      "nationName": "Phoenician",
+      "leaderName": "Dido",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Phoenician_(Civ6).png"
     },
     {
       "nationName": "Poland",
@@ -255,6 +311,14 @@
         "Vanilla"
       ],
       "nationPicturePath": "Spanish_(Civ6).png"
+    },
+    {
+      "nationName": "Swedish",
+      "leaderName": "Kristina",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Swedish_(Civ6).png"
     },
     {
       "nationName": "Sumerian",
