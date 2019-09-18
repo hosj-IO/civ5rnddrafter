@@ -1,0 +1,351 @@
+{
+  "civilizations": [
+    {
+      "nationName": "American",
+      "leaderName": "Washington",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "American_(Civ5).png"
+    },
+    {
+      "nationName": "Arabian",
+      "leaderName": "Harun al-Rashid",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Arabian_(Civ5).png"
+    },
+    {
+      "nationName": "Assyrian",
+      "leaderName": "Ashurbanipal",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Assyrian_(Civ5).png"
+    },
+    {
+      "nationName": "Austrian",
+      "leaderName": "Maria Theresa",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Austrian_(Civ5).png"
+    },
+    {
+      "nationName": "Aztec",
+      "leaderName": "Ashurbanipal",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Aztec_(Civ5).png"
+    },
+    {
+      "nationName": "Babylonian",
+      "leaderName": "Nebuchadnezzar II",
+      "expansion": [
+        "Babylon"
+      ],
+      "nationPicturePath": "Babylonian_(Civ5).png"
+    },
+    {
+      "nationName": "Brazilian",
+      "leaderName": "Pedro II",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Brazilian_(Civ5).png"
+    },
+    {
+      "nationName": "Byzantine",
+      "leaderName": "Theodora",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Byzantine_(Civ5).png"
+    },
+    {
+      "nationName": "Carthaginian",
+      "leaderName": "Dido",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Carthaginian_(Civ5).png"
+    },
+    {
+      "nationName": "Celtic",
+      "leaderName": "Boudicca",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Celtic_(Civ5).png"
+    },
+    {
+      "nationName": "Chinese",
+      "leaderName": "Wu Zetian",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Chinese_(Civ5).png"
+    },
+    {
+      "nationName": "Danish",
+      "leaderName": "Harald Bluetooth",
+      "expansion": [
+        "Denmark"
+      ],
+      "nationPicturePath": "Danish_(Civ5).png"
+    },
+    {
+      "nationName": "Dutch",
+      "leaderName": "William",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Dutch_(Civ5).png"
+    },
+    {
+      "nationName": "Egyptian",
+      "leaderName": "Ramesses II",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Egyptian_(Civ5).png"
+    },
+    {
+      "nationName": "English",
+      "leaderName": "Elizabeth",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "English_(Civ5).png"
+    },
+    {
+      "nationName": "Ethiopian",
+      "leaderName": "Haile Selassie",
+      "expansion": [
+        "Gods and Kings",
+        "Brave new World"
+      ],
+      "nationPicturePath": "Ethiopian_(Civ5).png"
+    },
+    {
+      "nationName": "French",
+      "leaderName": "Napoleon",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "French_(Civ5).png"
+    },
+    {
+      "nationName": "German",
+      "leaderName": "Bismarck",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "German_(Civ5).png"
+    },
+    {
+      "nationName": "Greek",
+      "leaderName": "Alexander",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Greek_(Civ5).png"
+    },
+    {
+      "nationName": "Hunnic",
+      "leaderName": "Attila",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Hunnic_(Civ5).png"
+    },
+    {
+      "nationName": "Incan",
+      "leaderName": "Pachacuti",
+      "expansion": [
+        "Spain and Inca"
+      ],
+      "nationPicturePath": "Incan_(Civ5).png"
+    },
+    {
+      "nationName": "Indian",
+      "leaderName": "Gandhi",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Indian_(Civ5).png"
+    },
+    {
+      "nationName": "Indonesian",
+      "leaderName": "Gajah Mada",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Indonesian_(Civ5).png"
+    },
+    {
+      "nationName": "Iroquois",
+      "leaderName": "Hiawatha",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Iroquois_(Civ5).png"
+    },
+    {
+      "nationName": "Japanese",
+      "leaderName": "Oda Nobunaga",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Japanese_(Civ5).png"
+    },
+    {
+      "nationName": "Korean",
+      "leaderName": "Sejong",
+      "expansion": [
+        "Korea"
+      ],
+      "nationPicturePath": "Korean_(Civ5).png"
+    },
+    {
+      "nationName": "Mayan",
+      "leaderName": "Pacal",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Mayan_(Civ5).png"
+    },
+    {
+      "nationName": "Mongolian",
+      "leaderName": "Genghis Khan",
+      "expansion": [
+        "Mongolian"
+      ],
+      "nationPicturePath": "Mongolian_(Civ5).png"
+    },
+    {
+      "nationName": "Moroccan",
+      "leaderName": "Ahmad al-Mansur",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Moroccan_(Civ5).png"
+    },
+    {
+      "nationName": "Ottoman",
+      "leaderName": "Suleiman",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Ottoman_(Civ5).png"
+    },
+    {
+      "nationName": "Persian",
+      "leaderName": "Darius I",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Persian_(Civ5).png"
+    },
+    {
+      "nationName": "Polish",
+      "leaderName": "Casimir III",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Polish_(Civ5).png"
+    },
+    {
+      "nationName": "Polynesian",
+      "leaderName": "Kamehameha",
+      "expansion": [
+        "Polynesia"
+      ],
+      "nationPicturePath": "Polynesian_(Civ5).png"
+    },
+    {
+      "nationName": "Portuguese",
+      "leaderName": "Maria I",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Portuguese_(Civ5).png"
+    },
+    {
+      "nationName": "Roman",
+      "leaderName": "Augustus Caesar",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Roman_(Civ5).png"
+    },
+    {
+      "nationName": "Russian",
+      "leaderName": "Catherine",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Russian_(Civ5).png"
+    },
+    {
+      "nationName": "Shoshone",
+      "leaderName": "Pocatello",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Shoshone_(Civ5).png"
+    },
+    {
+      "nationName": "Siamese",
+      "leaderName": "Ramkhamhaeng",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Siamese_(Civ5).png"
+    },
+    {
+      "nationName": "Songhai",
+      "leaderName": "Askia",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Songhai_(Civ5).png"
+    },
+    {
+      "nationName": "Spanish",
+      "leaderName": "Isabella",
+      "expansion": [
+        "Spain and Inca",
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Spanish_(Civ5).png"
+    },
+    {
+      "nationName": "Swedish",
+      "leaderName": "Gustavus Adolphus",
+      "expansion": [
+        "Gods and Kings"
+      ],
+      "nationPicturePath": "Swedish_(Civ5).png"
+    },
+    {
+      "nationName": "Venetian",
+      "leaderName": "Enrico Dandolo",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Venetian_(Civ5).png"
+    },
+    {
+      "nationName": "Zulu",
+      "leaderName": "Shaka",
+      "expansion": [
+        "Brave new World"
+      ],
+      "nationPicturePath": "Zulu_(Civ5).png"
+    }
+  ]
+}
+

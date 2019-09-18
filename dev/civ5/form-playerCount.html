@@ -1,0 +1,29 @@
+<form name='playerCountForm'>
+
+    <div ng-form='playerCountForm'>
+        <div class="form-group">
+            <label for="count">How many players?</label>
+            <select name="count" id="count" ng-model="formData.playerCount" class="form-control" required>
+                <option ng-repeat="n in [] | range:13" value="{{n}}">{{n}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="civPlayer">How many Civilizations will one player receive?</label>
+            <select name="civPlayer" id="civPlayer" ng-model="formData.countCiv" class="form-control" required>
+                <option ng-repeat="n in [] | range:4" value="{{n}}">{{n}}</option>
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <a ui-sref="form.expansions" class="btn btn-block btn-info" ng-click="PlayerCountLogic()" ng-disabled="!playerCountForm.$valid">
+                    Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a href=".." type="button" class="btn btn-primary" >Switch to Civilization 6</a>
+    </div>
+</form>

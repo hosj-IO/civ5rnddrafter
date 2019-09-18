@@ -1,0 +1,340 @@
+{
+  "civilizations": [
+    {
+      "nationName": "American",
+      "leaderName": "Theodore Roosevelt",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "American_(Civ6).png"
+    },
+    {
+      "nationName": "Arabian",
+      "leaderName": "Saladin",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Arabian_(Civ6).png"
+    },
+    {
+      "nationName": "Australia",
+      "leaderName": "John Curtin",
+      "expansion": [
+        "Australia"
+      ],
+      "nationPicturePath": "Australia_(Civ6).png"
+    },
+    {
+      "nationName": "Aztec",
+      "leaderName": "Montezuma",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Aztec_(Civ6).png"
+    },
+    {
+      "nationName": "Brazilian",
+      "leaderName": "Pedro II",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Brazilian_(Civ6).png"
+    },
+    {
+      "nationName": "Canadian",
+      "leaderName": "Wilfrid Laurier",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Canadian_(Civ6).png"
+    },
+    {
+      "nationName": "Chinese",
+      "leaderName": "Qin Shi Huang",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Chinese_(Civ6).png"
+    },
+    {
+      "nationName": "Cree",
+      "leaderName": "Poundmaker",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Cree_(Civ6).png"
+    },
+    {
+      "nationName": "Dutch",
+      "leaderName": "Wilhelmina",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Dutch_(Civ6).png"
+    },
+    {
+      "nationName": "Egyptian",
+      "leaderName": "Cleopatra",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Egyptian_(Civ6).png"
+    },
+    {
+      "nationName": "English",
+      "leaderName": "Victoria",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "English_(Civ6).png"
+    },
+    {
+      "nationName": "French",
+      "leaderName": "Catherine de Medici",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "French_(Civ6).png"
+    },
+    {
+      "nationName": "Georgian",
+      "leaderName": "Tamar",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Georgian_(Civ6).png"
+    },
+    {
+      "nationName": "German",
+      "leaderName": "Frederick Barbarossa",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "German_(Civ6).png"
+    },
+    {
+      "nationName": "Greek",
+      "leaderName": "Pericles",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Greek_(Civ6).png"
+    },
+    {
+      "nationName": "Hungarian",
+      "leaderName": "Matthias Corvinus",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Hungarian_(Civ6).png"
+    },
+    {
+      "nationName": "Indian",
+      "leaderName": "Gandhi",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Indian_(Civ6).png"
+    },
+    {
+      "nationName": "Japanese",
+      "leaderName": "Hojo Tokimune",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Japanese_(Civ6).png"
+    },
+    {
+      "nationName": "Khmer",
+      "leaderName": "Jayavarman VII",
+      "expansion": [
+        "Khmer and Indonesia"
+      ],
+      "nationPicturePath": "Khmer_(Civ6).png"
+    },
+    {
+      "nationName": "Kongolese",
+      "leaderName": "Mvemba a Nzinga",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Kongolese_(Civ6).png"
+    },
+    {
+      "nationName": "Korean",
+      "leaderName": "Seondeok",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Korean_(Civ6).png"
+    },
+    {
+      "nationName": "Incan",
+      "leaderName": "Pachacuti",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Incan_(Civ6).png"
+    },
+    {
+      "nationName": "Indonesia",
+      "leaderName": "Gitarja",
+      "expansion": [
+        "Khmer and Indonesia"
+      ],
+      "nationPicturePath": "Indonesia_(Civ6).png"
+    },
+    {
+      "nationName": "Macedonian",
+      "leaderName": "Alexander",
+      "expansion": [
+        "Persia and Macedon"
+      ],
+      "nationPicturePath": "Macedonian_(Civ6).png"
+    },
+    {
+      "nationName": "Mali",
+      "leaderName": "Mansa Musa",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Mali_(Civ6).png"
+    },
+    {
+      "nationName": "Māori",
+      "leaderName": "Kupe",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Māori_(Civ6).png"
+    },
+    {
+      "nationName": "Mapuche",
+      "leaderName": "Lautaro",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Mapuche_(Civ6).png"
+    },
+    {
+      "nationName": "Mongolian",
+      "leaderName": "Genghis Khan",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Mongolian_(Civ6).png"
+    },
+    {
+      "nationName": "Norwegian",
+      "leaderName": "Harald Hardada",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Norwegian_(Civ6).png"
+    },
+    {
+      "nationName": "Nubia",
+      "leaderName": "Amanitore",
+      "expansion": [
+        "Nubia"
+      ],
+      "nationPicturePath": "Nubia_(Civ6).png"
+    },
+    {
+      "nationName": "Ottoman",
+      "leaderName": "Suleiman",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Ottoman_(Civ6).png"
+    },
+    {
+      "nationName": "Persia",
+      "leaderName": "Cyrus",
+      "expansion": [
+        "Persia and Macedon"
+      ],
+      "nationPicturePath": "Persia_(Civ6).png"
+    },
+    {
+      "nationName": "Phoenician",
+      "leaderName": "Dido",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Phoenician_(Civ6).png"
+    },
+    {
+      "nationName": "Poland",
+      "leaderName": "Jadwiga",
+      "expansion": [
+        "Poland"
+      ],
+      "nationPicturePath": "Poland_(Civ6).png"
+    },
+    {
+      "nationName": "Roman",
+      "leaderName": "Trajan",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Roman_(Civ6).png"
+    },
+    {
+      "nationName": "Russian",
+      "leaderName": "Peter",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Russian_(Civ6).png"
+    },
+    {
+      "nationName": "Scythian",
+      "leaderName": "Tomyris",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Scythian_(Civ6).png"
+    },
+    {
+      "nationName": "Scottish",
+      "leaderName": "Robert the Bruce",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Scottish_(Civ6).png"
+    },
+    {
+      "nationName": "Spanish",
+      "leaderName": "Philip II",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Spanish_(Civ6).png"
+    },
+    {
+      "nationName": "Swedish",
+      "leaderName": "Kristina",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "Swedish_(Civ6).png"
+    },
+    {
+      "nationName": "Sumerian",
+      "leaderName": "Gilgamesh",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Sumerian_(Civ6).png"
+    },
+    {
+      "nationName": "Zulu",
+      "leaderName": "Shaka",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Zulu_(Civ6).png"
+    }
+  ]
+}
