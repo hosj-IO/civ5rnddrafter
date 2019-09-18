@@ -324,8 +324,8 @@ var app = angular.module('formApp', ['ngAnimate', 'ui.router', 'ui.bootstrap'])
 
 //region Reset
             $scope.Reset = function () {
-                $location.path('index.html');
-                $window.location.reload();
+                $location.path('index.html#/form/playerCount');
+                //$window.location.reload();
             }
 //endregion
 
