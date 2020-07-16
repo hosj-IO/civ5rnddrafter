@@ -129,12 +129,20 @@
       "nationPicturePath": "Gran_Colombian_(Civ6).png"
     },
     {
-      "nationName": "Greek",
+      "nationName": "Greek Pericles",
       "leaderName": "Pericles",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Greek_(Civ6).png"
+    },
+    {
+      "nationName": "Greek Gorgo",
+      "leaderName": "Gorgo",
+      "expansion": [
+        "Vanilla"
+      ],
+      "nationPicturePath": "Greek_(Civ6)_2.png"
     },
     {
       "nationName": "Hungarian",
