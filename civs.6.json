@@ -81,12 +81,20 @@
       "nationPicturePath": "Egyptian_(Civ6).png"
     },
     {
-      "nationName": "English",
+      "nationName": "English Victoria",
       "leaderName": "Victoria",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "English_(Civ6).png"
+    },
+    {
+      "nationName": "English Eleanor",
+      "leaderName": "Eleanor",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "English_(Civ6)_2.png"
     },
     {
       "nationName": "French",
