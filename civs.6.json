@@ -113,6 +113,14 @@
       "nationPicturePath": "German_(Civ6).png"
     },
     {
+      "nationName": "Gran Colombian",
+      "leaderName": "Simón Bolívar",
+      "expansion": [
+        "Maya & Gran Colombia Pack"
+      ],
+      "nationPicturePath": "Gran_Colombian_(Civ6).png"
+    },
+    {
       "nationName": "Greek",
       "leaderName": "Pericles",
       "expansion": [
@@ -215,6 +223,14 @@
         "Rise and Fall"
       ],
       "nationPicturePath": "Mapuche_(Civ6).png"
+    },
+    {
+      "nationName": "Mayan",
+      "leaderName": "Lady Six Sky",
+      "expansion": [
+        "Maya & Gran Colombia Pack"
+      ],
+      "nationPicturePath": "Mayan_(Civ6).png"
     },
     {
       "nationName": "Mongolian",
