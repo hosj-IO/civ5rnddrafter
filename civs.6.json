@@ -153,12 +153,20 @@
       "nationPicturePath": "Hungarian_(Civ6).png"
     },
     {
-      "nationName": "Indian",
+      "nationName": "Indian Gandhi",
       "leaderName": "Gandhi",
       "expansion": [
         "Vanilla"
       ],
       "nationPicturePath": "Indian_(Civ6).png"
+    },
+    {
+      "nationName": "Indian Chandragupta",
+      "leaderName": "Chandragupta",
+      "expansion": [
+        "Rise and Fall"
+      ],
+      "nationPicturePath": "Indian_(Civ6)_2.png"
     },
     {
       "nationName": "Japanese",
