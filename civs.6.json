@@ -1,10 +1,18 @@
 {
   "civilizations": [
     {
-      "nationName": "American",
+      "nationName": "American - Rough Rider",
       "leaderName": "Theodore Roosevelt",
       "expansion": [
         "Vanilla"
+      ],
+      "nationPicturePath": "American_(Civ6).png"
+    },
+    {
+      "nationName": "American - Bull Moose",
+      "leaderName": "Theodore Roosevelt",
+      "expansion": [
+        "Persona Pack"
       ],
       "nationPicturePath": "American_(Civ6).png"
     },
@@ -105,10 +113,18 @@
       "nationPicturePath": "Ethiopia_(Civ6).png"
     },
     {
-      "nationName": "French",
+      "nationName": "French - Black Queen",
       "leaderName": "Catherine de Medici",
       "expansion": [
         "Vanilla"
+      ],
+      "nationPicturePath": "French_(Civ6).png"
+    },
+    {
+      "nationName": "French - Magnificence",
+      "leaderName": "Catherine de Medici",
+      "expansion": [
+        "Persona Pack"
       ],
       "nationPicturePath": "French_(Civ6).png"
     },
