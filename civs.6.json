@@ -48,6 +48,14 @@
       ],
       "nationPicturePath": "Brazilian_(Civ6).png"
     },
+        {
+      "nationName": "Byzantine",
+      "leaderName": "Basil II",
+      "expansion": [
+        "Byzantium & Gaul"
+      ],
+      "nationPicturePath": "Byzantine_(Civ6).png"
+    },
     {
       "nationName": "Canadian",
       "leaderName": "Wilfrid Laurier",
@@ -129,6 +137,14 @@
       "nationPicturePath": "French_(Civ6).png"
     },
     {
+      "nationName": "Gallic",
+      "leaderName": "Ambiorix",
+      "expansion": [
+        "Byzantium & Gaul"
+      ],
+      "nationPicturePath": "Gallic_(Civ6).png"
+    },
+        {
       "nationName": "Georgian",
       "leaderName": "Tamar",
       "expansion": [
