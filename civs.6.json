@@ -41,6 +41,14 @@
       "nationPicturePath": "Aztec_(Civ6).png"
     },
     {
+      "nationName": "Babylonian",
+      "leaderName": "Hammurabi",
+      "expansion": [
+        "Babylon Pack"
+      ],
+      "nationPicturePath": "Babylon_(Civ6).png"
+    },
+    {
       "nationName": "Brazilian",
       "leaderName": "Pedro II",
       "expansion": [
@@ -63,6 +71,14 @@
         "Gathering Storm"
       ],
       "nationPicturePath": "Canadian_(Civ6).png"
+    },
+    {
+      "nationName": "Chinese",
+      "leaderName": "Kublai Khan",
+      "expansion": [
+        "Vietnam & Kublai Khan Pack"
+      ],
+      "nationPicturePath": "Chinese_Kublai_(Civ6).png"
     },
     {
       "nationName": "Chinese",
@@ -305,6 +321,14 @@
       "nationPicturePath": "Mongolian_(Civ6).png"
     },
     {
+      "nationName": "Mongolian",
+      "leaderName": "Kublai Khan",
+      "expansion": [
+        "Vietnam & Kublai Khan Pack"
+      ],
+      "nationPicturePath": "Mongolian_Kublai_(Civ6).png"
+    },
+    {
       "nationName": "Norwegian",
       "leaderName": "Harald Hardada",
       "expansion": [
@@ -407,6 +431,14 @@
         "Vanilla"
       ],
       "nationPicturePath": "Sumerian_(Civ6).png"
+    },
+    {
+      "nationName": "Vietnam",
+      "leaderName": "Bà Triệu",
+      "expansion": [
+        "Vietnam & Kublai Khan Pack"
+      ],
+      "nationPicturePath": "Vietnam_(Civ6).png"
     },
     {
       "nationName": "Zulu",
