@@ -73,7 +73,7 @@
       "nationPicturePath": "Canadian_(Civ6).png"
     },
     {
-      "nationName": "Chinese",
+      "nationName": "Chinese - Kublai Khan",
       "leaderName": "Kublai Khan",
       "expansion": [
         "Vietnam & Kublai Khan Pack"
@@ -81,7 +81,7 @@
       "nationPicturePath": "Chinese_Kublai_(Civ6).png"
     },
     {
-      "nationName": "Chinese",
+      "nationName": "Chinese - Qin Shi Huang",
       "leaderName": "Qin Shi Huang",
       "expansion": [
         "Vanilla"
@@ -313,7 +313,7 @@
       "nationPicturePath": "Mayan_(Civ6).png"
     },
     {
-      "nationName": "Mongolian",
+      "nationName": "Mongolian - Genghis Khan",
       "leaderName": "Genghis Khan",
       "expansion": [
         "Rise and Fall"
@@ -321,7 +321,7 @@
       "nationPicturePath": "Mongolian_(Civ6).png"
     },
     {
-      "nationName": "Mongolian",
+      "nationName": "Mongolian - Kublai Khan",
       "leaderName": "Kublai Khan",
       "expansion": [
         "Vietnam & Kublai Khan Pack"
