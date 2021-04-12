@@ -377,6 +377,14 @@
       "nationPicturePath": "Poland_(Civ6).png"
     },
     {
+      "nationName": "Portugal",
+      "leaderName": "João III",
+      "expansion": [
+        "Portugal"
+      ],
+      "nationPicturePath": "Portugal_(Civ6).png"
+    },
+    {
       "nationName": "Roman",
       "leaderName": "Trajan",
       "expansion": [
