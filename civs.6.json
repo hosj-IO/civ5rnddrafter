@@ -17,6 +17,14 @@
       "nationPicturePath": "American_(Civ6).png"
     },
     {
+      "nationName": "American - Abraham Lincoln",
+      "leaderName": "Abraham Lincoln",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "American_(Civ6).png"
+    },
+    {
       "nationName": "Arabian",
       "leaderName": "Saladin",
       "expansion": [
@@ -85,6 +93,22 @@
       "leaderName": "Qin Shi Huang",
       "expansion": [
         "Vanilla"
+      ],
+      "nationPicturePath": "Chinese_(Civ6).png"
+    },
+        {
+      "nationName": "Chinese - Yongle",
+      "leaderName": "Yongle",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Chinese_(Civ6).png"
+    },
+    {
+      "nationName": "Chinese - Wu Zetian",
+      "leaderName": "Wu Zetian",
+      "expansion": [
+        "Leader Pass"
       ],
       "nationPicturePath": "Chinese_(Civ6).png"
     },
@@ -225,10 +249,18 @@
       "nationPicturePath": "Indian_(Civ6)_2.png"
     },
     {
-      "nationName": "Japanese",
+      "nationName": "Japanese - Hojo Tokimune",
       "leaderName": "Hojo Tokimune",
       "expansion": [
         "Vanilla"
+      ],
+      "nationPicturePath": "Japanese_(Civ6).png"
+    },
+    {
+      "nationName": "Japanese - Tokugawa",
+      "leaderName": "Tokugawa",
+      "expansion": [
+        "Leader Pass"
       ],
       "nationPicturePath": "Japanese_(Civ6).png"
     },
@@ -241,10 +273,18 @@
       "nationPicturePath": "Khmer_(Civ6).png"
     },
     {
-      "nationName": "Kongolese",
+      "nationName": "Kongolese - Mvemba a Nzinga",
       "leaderName": "Mvemba a Nzinga",
       "expansion": [
         "Vanilla"
+      ],
+      "nationPicturePath": "Kongolese_(Civ6).png"
+    },
+    {
+      "nationName": "Kongolese - Nzinga Mbande",
+      "leaderName": "Nzinga Mbande",
+      "expansion": [
+        "Leader Pass"
       ],
       "nationPicturePath": "Kongolese_(Civ6).png"
     },
@@ -353,10 +393,18 @@
       "nationPicturePath": "Ottoman_(Civ6).png"
     },
     {
-      "nationName": "Persia",
+      "nationName": "Persia - Cyrus",
       "leaderName": "Cyrus",
       "expansion": [
         "Persia and Macedon"
+      ],
+      "nationPicturePath": "Persia_(Civ6).png"
+    },
+    {
+      "nationName": "Persia - Nader Shah",
+      "leaderName": "Nader Shah",
+      "expansion": [
+        "Leader Pass"
       ],
       "nationPicturePath": "Persia_(Civ6).png"
     },
