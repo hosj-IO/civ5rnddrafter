@@ -169,6 +169,14 @@
       "nationPicturePath": "French_(Civ6).png"
     },
     {
+      "nationName": "French - Eleanor",
+      "leaderName": "Eleanor",
+      "expansion": [
+        "Gathering Storm"
+      ],
+      "nationPicturePath": "French_(Civ6).png"
+    },
+    {
       "nationName": "French - Magnificence",
       "leaderName": "Catherine de Medici",
       "expansion": [
