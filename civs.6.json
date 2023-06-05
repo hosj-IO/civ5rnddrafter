@@ -73,7 +73,7 @@
       "nationPicturePath": "Byzantine_(Civ6).png"
     },
     {
-      "nationName": "Byzantine",
+      "nationName": "Byzantine - Theodora",
       "leaderName": "Theodora",
       "expansion": [
         "Leader Pass"
@@ -145,7 +145,7 @@
       "nationPicturePath": "Egyptian_(Civ6).png"
     },
     {
-      "nationName": "Egyptian",
+      "nationName": "Egyptian - Cleopatra (Ptolemaic)",
       "leaderName": "Cleopatra (Ptolemaic)",
       "expansion": [
         "Leader Pass"
@@ -153,7 +153,7 @@
       "nationPicturePath": "CleopatraPt_(Civ6).png"
     },
     {
-      "nationName": "Egyptian",
+      "nationName": "Egyptian - Ramses II",
       "leaderName": "Ramses II",
       "expansion": [
         "Leader Pass"
@@ -233,7 +233,7 @@
       "nationPicturePath": "German_(Civ6).png"
     },
     {
-      "nationName": "German",
+      "nationName": "German - Ludwig II",
       "leaderName": "Ludwig II",
       "expansion": [
         "Leader Pass"
@@ -329,7 +329,7 @@
       "nationPicturePath": "Kongolese_(Civ6).png"
     },
     {
-      "nationName": "Korean",
+      "nationName": "Korean - Sejong",
       "leaderName": "Sejong",
       "expansion": [
         "Leader Pass"
@@ -377,7 +377,7 @@
       "nationPicturePath": "Mali_(Civ6).png"
     },
     {
-      "nationName": "Mali",
+      "nationName": "Mali - Sundiata",
       "leaderName": "Sundiata Keita",
       "expansion": [
         "Leader Pass"
