@@ -73,6 +73,14 @@
       "nationPicturePath": "Byzantine_(Civ6).png"
     },
     {
+      "nationName": "Byzantine",
+      "leaderName": "Theodora",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Theodora_(Civ6).png"
+    },
+    {
       "nationName": "Canadian",
       "leaderName": "Wilfrid Laurier",
       "expansion": [
@@ -225,6 +233,14 @@
       "nationPicturePath": "German_(Civ6).png"
     },
     {
+      "nationName": "German",
+      "leaderName": "Ludwig II",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Ludwig_(Civ6).png"
+    },
+    {
       "nationName": "Gran Colombian",
       "leaderName": "Simón Bolívar",
       "expansion": [
@@ -311,6 +327,14 @@
         "Leader Pass"
       ],
       "nationPicturePath": "Kongolese_(Civ6).png"
+    },
+    {
+      "nationName": "Korean",
+      "leaderName": "Sejong",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Sejong_(Civ6).png"
     },
     {
       "nationName": "Korean",
