@@ -137,6 +137,22 @@
       "nationPicturePath": "Egyptian_(Civ6).png"
     },
     {
+      "nationName": "Egyptian",
+      "leaderName": "Cleopatra (Ptolemaic)",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "CleopatraPt_(Civ6).png"
+    },
+    {
+      "nationName": "Egyptian",
+      "leaderName": "Ramses II",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Ramses_(Civ6).png"
+    },
+    {
       "nationName": "English Victoria",
       "leaderName": "Victoria",
       "expansion": [
@@ -335,6 +351,14 @@
         "Gathering Storm"
       ],
       "nationPicturePath": "Mali_(Civ6).png"
+    },
+    {
+      "nationName": "Mali",
+      "leaderName": "Sundiata Keita",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Sundiata_(Civ6).png"
     },
     {
       "nationName": "Māori",
