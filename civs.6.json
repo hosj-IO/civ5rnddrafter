@@ -33,6 +33,14 @@
       "nationPicturePath": "Arabian_(Civ6).png"
     },
     {
+      "nationName": "Arabian - Saladin (Sultan)",
+      "leaderName": "Saladin (Sultan)",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Saladin_(Civ6).png"
+    },
+    {
       "nationName": "Australia",
       "leaderName": "John Curtin",
       "expansion": [
@@ -104,7 +112,15 @@
       ],
       "nationPicturePath": "Chinese_(Civ6).png"
     },
-        {
+    {
+      "nationName": "Chinese - Qin Shi Huang (Unifier)",
+      "leaderName": "Qin Shi Huang (Unifier)",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Qin_(Civ6).png"
+    },
+    {
       "nationName": "Chinese - Yongle",
       "leaderName": "Yongle",
       "expansion": [
@@ -473,6 +489,14 @@
       "nationPicturePath": "Ottoman_(Civ6).png"
     },
     {
+      "nationName": "Ottoman - Suleiman (Muhteşem)",
+      "leaderName": "Suleiman (Muhteşem)",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Suleiman_(Civ6).png"
+    },
+    {
       "nationName": "Persia - Cyrus",
       "leaderName": "Cyrus",
       "expansion": [
@@ -519,6 +543,14 @@
         "Vanilla"
       ],
       "nationPicturePath": "Roman_(Civ6).png"
+    },
+    {
+      "nationName": "Roman - Julius Caesar",
+      "leaderName": "Julius Caesar",
+      "expansion": [
+        "Julius Caesar"
+      ],
+      "nationPicturePath": "Caesar_(Civ6).png"
     },
     {
       "nationName": "Russian",
