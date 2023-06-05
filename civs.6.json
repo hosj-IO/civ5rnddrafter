@@ -169,12 +169,28 @@
       "nationPicturePath": "English_(Civ6).png"
     },
     {
+      "nationName": "English - Victoria (Age of Steam)",
+      "leaderName": "Victoria (Age of Steam)",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Victoria_(Civ6).png"
+    },
+    {
       "nationName": "English Eleanor",
       "leaderName": "Eleanor",
       "expansion": [
         "Gathering Storm"
       ],
       "nationPicturePath": "English_(Civ6)_2.png"
+    },
+    {
+      "nationName": "English - Elizabeth I",
+      "leaderName": "Elizabeth I",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Elisabeth_(Civ6).png"
     },
     {
       "nationName": "Ethiopia",
@@ -431,6 +447,14 @@
         "Vanilla"
       ],
       "nationPicturePath": "Norwegian_(Civ6).png"
+    },
+    {
+      "nationName": "Norwegian - Harald Hardrada (Varangian)",
+      "leaderName": "Harald Hardrada (Varangian)",
+      "expansion": [
+        "Leader Pass"
+      ],
+      "nationPicturePath": "Harald_(Civ6).png"
     },
     {
       "nationName": "Nubia",
